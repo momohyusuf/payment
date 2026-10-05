@@ -1,0 +1,28 @@
+﻿@import "tailwindcss";
+@theme {
+  --color-paper: #f6f5f0;
+  --color-ink: #171a20;
+  --color-cobalt: #3155ec;
+  --color-cobalt-dark: #2442bc;
+  --color-muted: #6c706f;
+  --color-line: #dddeda;
+  --color-sage: #39735b;
+  --color-pale: #e9edff;
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-editorial: Georgia, "Times New Roman", serif;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-travel: travel 3.5s linear infinite;
+  --animate-enter: enter .6s ease-out both;
+  @keyframes float { 0%, 100% { transform: translateY(0) rotate(-5deg); } 50% { transform: translateY(-12px) rotate(-3deg); } }
+  @keyframes travel { to { stroke-dashoffset: -240; } }
+  @keyframes enter { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+}
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+  body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+  button, a, input, select { -webkit-tap-highlight-color: transparent; }
+  button:not(:disabled), select { cursor: pointer; }
+  :focus-visible { outline: 3px solid var(--color-cobalt); outline-offset: 5px; }
+  ::selection { color: white; background: var(--color-cobalt); }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition-duration: 0s !important; } }
+}

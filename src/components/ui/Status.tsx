@@ -1,0 +1,2 @@
+import type { ReactNode } from 'react';
+export default function Status({ children, dark = false }: { children: ReactNode; dark?: boolean }) { return <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[10px] font-medium tracking-wide ${dark ? 'bg-white/10 text-white/80' : 'bg-sage/10 text-sage'}`}><span className="h-1.5 w-1.5 rounded-full bg-current" />{children}</span>; }
