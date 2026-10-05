@@ -66,7 +66,7 @@ export default function WaitlistDialog({ onClose }: { onClose: () => void }) {
             placeholder="you@company.com"
             aria-invalid={!!error}
             aria-describedby="waitlist-note waitlist-error"
-            className="mb-4 w-full rounded-xl border border-line bg-white p-4 text-sm"
+            className="mb-4 w-full rounded-xl border border-line bg-white p-4 text-base md:text-sm [@media(pointer:coarse)]:text-base"
           />
           {error && (
             <p

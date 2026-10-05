@@ -84,7 +84,7 @@ export default function ChatDialog({
                 aria-label="AI reporting period"
                 value={days}
                 onChange={(e) => onDays(Number(e.target.value))}
-                className="appearance-none rounded-full border border-line bg-paper py-2 pr-7 pl-3 text-[10px]"
+                className="appearance-none rounded-full border border-line bg-paper py-2 pr-7 pl-3 text-base md:text-[10px] [@media(pointer:coarse)]:text-base"
               >
                 {[7, 30, 90].map((d) => (
                   <option key={d} value={d}>
@@ -269,7 +269,7 @@ export default function ChatDialog({
                   maxLength={500}
                   aria-describedby="chat-instructions"
                   placeholder="Ask about your finances…"
-                  className="max-h-28 min-w-0 flex-1 resize-none bg-transparent py-2 text-xs leading-5 outline-none"
+                  className="max-h-28 min-w-0 flex-1 resize-none bg-transparent py-2 text-base leading-5 outline-none md:text-xs [@media(pointer:coarse)]:text-base"
                 />
                 <button
                   type="submit"

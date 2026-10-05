@@ -57,3 +57,11 @@ Actual instruction: “let's move the the nova aI do dedicated chat bot modal wi
 - Browser inspection found native Tab cycling could leave document focus when the send button was disabled. Added explicit forward/reverse focus cycling to the shared modal, while preserving Escape, backdrop dismissal, body scroll restoration, and return focus.
 - Corrected the old browser assertions to check contained transfer-dialog focus and security stage text including its number; adapted the financial flow test to the new AI modal.
 - Verification: ten unit tests passed; full application browser flow passed; dedicated chatbot browser checks passed, including desktop/tablet/mobile and a short viewport. Build and lint passed. No live model, backend, persistent transcript, or real financial action was introduced.
+
+## Later correction — iPhone input focus zoom
+
+Actual instruction: “text imput on iphone zooms out”.
+
+- Found the chat textarea rendered at 12px, with other form controls at 10–14px. Changed chat, search, waitlist, and period controls to Tailwind `text-base` on small screens and coarse-pointer devices, including landscape phones. Larger transfer input text already exceeds 16px.
+- Kept the viewport unrestricted so users retain pinch-to-zoom. Desktop typography remains at its previous size for fine-pointer devices.
+- Verified computed font sizes are 16px in touch-device emulation at 390×844 and 844×390. Build, full browser flow, and dedicated chat browser checks passed. Physical iPhone Safari focus behavior was not directly tested.

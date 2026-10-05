@@ -112,7 +112,7 @@ export default function Dashboard({
                       onDays(Number(e.target.value));
                       setShowAll(false);
                     }}
-                    className="appearance-none rounded-full border border-line bg-white py-2 pr-8 pl-3 text-[10px]"
+                    className="appearance-none rounded-full border border-line bg-white py-2 pr-8 pl-3 text-base md:text-[10px] [@media(pointer:coarse)]:text-base"
                   >
                     {[7, 30, 90].map((d) => (
                       <option key={d} value={d}>
@@ -178,7 +178,7 @@ export default function Dashboard({
                         setShowAll(false);
                       }}
                       placeholder="Search activity"
-                      className="w-32 bg-transparent py-2.5 text-[10px] outline-none sm:w-40"
+                      className="w-32 bg-transparent py-2.5 text-base outline-none sm:w-40 md:text-[10px] [@media(pointer:coarse)]:text-base"
                     />
                   </div>
                 </div>
